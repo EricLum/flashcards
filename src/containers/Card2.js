@@ -1,18 +1,28 @@
 import React, {Component} from 'react'
-import {Row,Col,Card} from 'react-materialize'
-class Card2 extends Component {
+import PropTypes from 'prop-types'
+class Card extends Component {
 
   render(){
     return(
-      <Row>
-        <Col m={6} s={12}>
-            <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='#'>This is a link</a>]}>
-            I am a very simple card.
-            </Card>
-        </Col>
-      </Row>
+      <div>
+        <div>
+          {this.props.title}
+        </div>
+        <div>
+          {this.props.question}
+        </div>
+        <div>
+          {this.props.answer}
+        </div>
+      </div>
     )
   }
 }
 
-export default Card2
+Card.defaultProps {
+  title: 'Javascript Question 1',
+  question: 'Explain the concept of scope',
+  answer: 'Scope is the realm in which a variable lives'
+}
+
+export default Card
