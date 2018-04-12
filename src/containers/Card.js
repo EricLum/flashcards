@@ -19,7 +19,7 @@ class Card extends Component {
   }
 }
 
-Card.defaultProps {
+Card.defaultProps = {
   title: 'Javascript Question 1',
   question: 'Explain the concept of scope',
   answer: 'Scope is the realm in which a variable lives'
