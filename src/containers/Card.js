@@ -2,18 +2,36 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 class Card extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      showAnswer: false
+    }
+    this.toggleShowAnswer = this.toggleShowAnswer.bind(this)
+  }
+
+  toggleShowAnswer(){
+    this.setState(prevState => ({
+      showAnswer: !prevState.showAnswer
+    }))
+  }
+
   render(){
+
     return(
-      <div>
+      <div className='card'>
         <div>
           {this.props.title}
         </div>
         <div>
           {this.props.question}
         </div>
-        <div>
-          {this.props.answer}
-        </div>
+        <button onClick={this.toggleShowAnswer}>click me</button>
+        {this.state.showAnswer &&
+          <div>
+            {this.props.answer}
+          </div>
+        }
       </div>
     )
   }
