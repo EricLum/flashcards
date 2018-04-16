@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 class Deck extends Component {
 
   state = {
-    cardstack: []
+    cardstack: [],
+    deckId: 0
   }
 
   render(){
