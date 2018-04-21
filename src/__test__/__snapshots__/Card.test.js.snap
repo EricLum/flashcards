@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    answer="Scope is the realm in which a variable lives"
+    question="Explain the concept of scope"
+    title="Javascript Question 1"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div>
+          Javascript Question 1
+</div>,
+        <div>
+          Explain the concept of scope
+</div>,
+        <button
+          onClick={[Function]}
+>
+          click me
+</button>,
+        false,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Javascript Question 1",
+        },
+        "ref": null,
+        "rendered": "Javascript Question 1",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Explain the concept of scope",
+        },
+        "ref": null,
+        "rendered": "Explain the concept of scope",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "click me",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "click me",
+        "type": "button",
+      },
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            Javascript Question 1
+</div>,
+          <div>
+            Explain the concept of scope
+</div>,
+          <button
+            onClick={[Function]}
+>
+            click me
+</button>,
+          false,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Javascript Question 1",
+          },
+          "ref": null,
+          "rendered": "Javascript Question 1",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Explain the concept of scope",
+          },
+          "ref": null,
+          "rendered": "Explain the concept of scope",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "click me",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "click me",
+          "type": "button",
+        },
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

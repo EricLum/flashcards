@@ -1,20 +1,16 @@
-const CardAdapter = ( function(){
-  let postBody = JSON.stringify({
-    card:{}
-  })
-
+const CardAdapter = (function(){
   let urlPaths = {'base': 'http://localhost:3001/api/v1/cards'}
   return class CardAdapter {
 
-    static indexCards() {
+    static index() {
       return fetch(urlPaths['base'])
     }
 
-    static getCard(index){
+    static get(index){
       return fetch(urlPaths['base']+`${index}`)
     }
 
-    static postCard(data){
+    static post(data){
       let header = {method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -29,8 +25,4 @@ const CardAdapter = ( function(){
   }
 })()
 
-const DeckAdapter = ( function(){
-
-})()
-
-export {CardAdapter, DeckAdapter}
+export default CardAdapter
