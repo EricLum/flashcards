@@ -14,14 +14,13 @@ class DeckForm extends Component {
   //   deckId: 0
   // }
 
+
   state =  {
     title: ''
   }
 
   handleSubmit(e){
     e.preventDefault()
-    console.log('submit')
-    // run backend adapter
     DeckAdapter.post(this.state)
   }
 
@@ -30,19 +29,16 @@ class DeckForm extends Component {
       [e.target.name]: e.target.value
     })
   }
-  onSubmit(e){}
 
   render(){
     return(
-      <form onSubmit={this.handleSubmit} onChange={this.handleInput}>
-        {/* <label>Question: </label> */}
-        <label>Title: </label>
-        <input type='text' name='title'/>
-        {/* <input type='text' name='question'/>
-        <label>Answer: </label>
-        <input type='text' name='answer' />
-        <input type='submit' /> */}
-      </form>
+      <div> Create a Deck
+        <form onSubmit={this.handleSubmit} onChange={this.handleInput}>
+          {/* <label>Question: </label> */}
+          <label>Title: </label>
+          <input type='text' name='title'/>
+        </form>
+      </div>
     )
   }
 }
