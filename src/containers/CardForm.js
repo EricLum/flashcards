@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+import CardAdapter from '../adapters/CardAdapter'
 
 class CardForm extends Component {
   constructor(props){
@@ -12,12 +12,14 @@ class CardForm extends Component {
   state = {
     title: '',
     question: '',
-    answer: ''
+    answer: '',
+    deckId: 0
   }
 
   onSubmit(e) {
     e.preventDefault()
-    
+    //Add submitting behavior
+    CardAdapter.post(this.state)
   }
 
   handleInput(e){
@@ -27,7 +29,7 @@ class CardForm extends Component {
   }
 
   render(){
-    return(<form>
+    return(<form onSubmit={this.onSubmit} onChange={this.handleInput}>
 
         <div>
           <label>Title: </label>
@@ -42,6 +44,11 @@ class CardForm extends Component {
         <div>
           <label>Answer: </label>
           <input type='text' name='answer' />
+        </div>
+          <label>DeckId: </label>
+          <input type='number' name='deckId' />
+        <div>
+
         </div>
         <input type='submit' />
     </form>)

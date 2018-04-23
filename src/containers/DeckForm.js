@@ -37,6 +37,7 @@ class DeckForm extends Component {
           {/* <label>Question: </label> */}
           <label>Title: </label>
           <input type='text' name='title'/>
+          <input type='submit' />
         </form>
       </div>
     )
