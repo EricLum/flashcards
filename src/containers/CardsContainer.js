@@ -19,7 +19,8 @@ class CardsContainer extends Component {
   }
 
   render(){
-    return(<div className='cardsGrid'>
+    return(
+      <div className='cardsGrid'>
       {this.state.cards}
     </div>)
   }
