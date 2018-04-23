@@ -3,10 +3,11 @@ class Card extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      showAnswer: false
-    }
     this.toggleShowAnswer = this.toggleShowAnswer.bind(this)
+  }
+
+  state = {
+    showAnswer: false
   }
 
   toggleShowAnswer(){
