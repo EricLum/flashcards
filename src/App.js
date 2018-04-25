@@ -3,6 +3,7 @@ import './App.css';
 import DeckForm from './containers/DeckForm'
 import CardForm from './containers/CardForm'
 import CardsContainer from './containers/CardsContainer'
+import DecksContainer from './containers/DecksContainer'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 //views
@@ -13,9 +14,20 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 //deck manager
 //ability to associate cards to multiple decks
-const DeckManager = () => (
+
+const CardManager =() => (
   <div>
     <CardsContainer />
+  </div>
+)
+
+const DeckManager = ({match}) => (
+  <div>
+    <Link to= {match.url +'/cards'} >clickme</Link>
+    <DecksContainer />
+    <Route
+    path = {match.url + '/cards'}
+    component={CardsContainer} />
   </div>
 )
 
@@ -30,6 +42,7 @@ const Navigation = () => (
     <div className='landingLinks'>
       <Link to='/'>Home</Link>
       <Link to='/decks'>Decks</Link>
+      <Link to='/cards'>Cards</Link>
     </div>
   </div>
 )
@@ -45,6 +58,7 @@ class App extends Component {
             <Navigation />
             <Route exact path ='/' component={Home} />
             <Route path='/decks' component={DeckManager} />
+            <Route path='/cards' component={CardManager} />
           </div>
         </Router>
       </div>

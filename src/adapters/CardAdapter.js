@@ -22,6 +22,22 @@ const CardAdapter = (function(){
     }
       return fetch(urlPaths['base'],header)
     }
+
+    static getDeckCards(data){
+      let header = {method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        card: {deckId: data}
+      })
+    }
+    return fetch(urlPaths['base'],header)
+    }
+
+
+
   }
 })()
 

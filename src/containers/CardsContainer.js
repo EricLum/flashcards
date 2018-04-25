@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Card from '../containers/Card'
 import CardAdapter from '../adapters/CardAdapter'
-
+import CardsForm from '../containers/CardForm'
 class CardsContainer extends Component {
 
   state = {
@@ -20,9 +20,15 @@ class CardsContainer extends Component {
 
   render(){
     return(
-      <div className='cardsGrid'>
-      {this.state.cards}
-    </div>)
+      <div>
+        <div>
+          <CardsForm />
+        </div>
+        <div className='cardsGrid'>
+        {this.state.cards}
+        </div>
+      </div>
+    )
   }
 }
 
