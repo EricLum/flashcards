@@ -8,15 +8,9 @@ class DeckForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  // state = {
-  //   question: '',
-  //   answer: '',
-  //   deckId: 0
-  // }
-
-
   state =  {
-    title: ''
+    title: '',
+    description: ''
   }
 
   handleSubmit(e){
@@ -35,8 +29,12 @@ class DeckForm extends Component {
       <div> Create a Deck
         <form onSubmit={this.handleSubmit} onChange={this.handleInput}>
           {/* <label>Question: </label> */}
+
           <label>Title: </label>
           <input type='text' name='title'/>
+          <label>Description: </label>
+          <input type='text' name='description'/>
+
           <input type='submit' />
         </form>
       </div>

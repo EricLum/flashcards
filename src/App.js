@@ -15,19 +15,9 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 //deck manager
 //ability to associate cards to multiple decks
 
-const CardManager =() => (
-  <div>
-    <CardsContainer />
-  </div>
-)
-
 const DeckManager = ({match}) => (
   <div>
-    <Link to= {match.url +'/cards'} >clickme</Link>
-    <DecksContainer />
-    <Route
-    path = {match.url + '/cards'}
-    component={CardsContainer} />
+    <DecksContainer match={match}/>
   </div>
 )
 
@@ -57,8 +47,7 @@ class App extends Component {
           <div className='App'>
             <Navigation />
             <Route exact path ='/' component={Home} />
-            <Route path='/decks' component={DeckManager} />
-            <Route path='/cards' component={CardManager} />
+            <Route exact path='/decks' component={DeckManager} />
           </div>
         </Router>
       </div>

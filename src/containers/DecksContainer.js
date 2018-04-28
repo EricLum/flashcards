@@ -11,7 +11,7 @@ class DecksContainer extends Component {
   componentDidMount(){
     DeckAdapter.index().then(res => res.json())
     .then( json => {
-      let data = json.map(deck => <Deck title={deck.title} />)
+      let data = json.map(deck => <Deck key={deck.id} id={deck.id} match={this.props.match} title={deck.title} description={deck.description} />)
       this.setState({
         decks: data
       })}
