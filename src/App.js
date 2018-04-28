@@ -48,6 +48,7 @@ class App extends Component {
             <Navigation />
             <Route exact path ='/' component={Home} />
             <Route exact path='/decks' component={DeckManager} />
+            <Route exact path='/decks/:deckId' component={CardsContainer} />
           </div>
         </Router>
       </div>

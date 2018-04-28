@@ -10,8 +10,8 @@ class CardsContainer extends Component {
   }
 
   componentDidMount(){
-    console.dir(this.props.match)
-    DeckAdapter.get(this.props.match.parameters.deckId).then( res => res.json())
+    console.dir(this.props)
+    DeckAdapter.get(this.props.match.params.deckId).then( res => res.json())
     .then( json => {
       let data = json.map( card => <Card key={card.id} answer={card.answer} question={card.question} title={card.title} />)
       this.setState({
@@ -23,9 +23,8 @@ class CardsContainer extends Component {
   render(){
     return(
       <div>
-        testing
         <div>
-          <CardsForm />
+          <CardsForm deckId={this.props.match.params.deckId}/>
         </div>
         <div className='cardsGrid'>
         {this.state.cards}

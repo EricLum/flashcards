@@ -17,7 +17,10 @@ const CardAdapter = (function(){
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        card: data
+        card: data,
+        deck: {
+          id: data.deckId
+        }
       })
     }
       return fetch(urlPaths['base'],header)

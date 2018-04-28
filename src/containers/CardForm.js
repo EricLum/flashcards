@@ -16,6 +16,13 @@ class CardForm extends Component {
     deckId: 0
   }
 
+  componentDidMount(){
+    console.log(this.props)
+    this.setState({
+      deckId: this.props.deckId
+    })
+  }
+
   onSubmit(e) {
     e.preventDefault()
     //Add submitting behavior
@@ -45,11 +52,7 @@ class CardForm extends Component {
           <label>Answer: </label>
           <input type='text' name='answer' />
         </div>
-          <label>DeckId: </label>
-          <input type='number' name='deckId' />
-        <div>
 
-        </div>
         <input type='submit' />
     </form>)
   }

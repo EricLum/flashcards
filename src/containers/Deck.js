@@ -52,7 +52,7 @@ class Deck extends Component {
             <div>
               {this.props.description}
               <Link to={`${this.props.match.url}/${this.props.id}`}> this is a link</Link>
-              <Route path={`${this.props.match.url}/:deckId`} render={(props) => <CardsContainer {...props} />} />
+              {/* <Route path={`${this.props.match.url}/:deckId`} render={(props) => <CardsContainer {...props} />} /> */}
               />
             </div>
           }

@@ -7,14 +7,10 @@ const DeckAdapter = (function(){
     }
 
     static get(id){
-      let body = JSON.stringify({
-        body: {
-          deck: id
-        }
-      })
-      let newHeader = Object.assign({}, body)
+
+      // let newHeader = Object.assign({}, body)
       //add optional header for getting the cards of a deck
-      return fetch(urlPaths['base']+`/${id}`, newHeader)
+      return fetch(urlPaths['base']+`/${id}`)
     }
 
     // static retrieveCards(deckId){
