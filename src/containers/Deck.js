@@ -1,47 +1,32 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Route, Redirect, Link} from 'react-router-dom'
-import CardsContainer from './CardsContainer'
+import {Link} from 'react-router-dom'
 
-class Deck extends Component {
-  constructor(props){
-    super(props)
-
-    this.handleClick = this.handleClick.bind(this)
-    this.handleMouseEnter = this.handleMouseEnter.bind(this)
-    this.handleMouseLeave = this.handleMouseLeave.bind(this)
-  }
+export default class Deck extends Component {
 
   state = {
-    cardstack: [],
     clicked: false,
     showDescription: false
   }
 
-  componentDidMount(){
-  }
-
-  handleMouseEnter(e){
+  handleMouseEnter = (e) => {
     this.setState({
       showDescription: true
     })
   }
 
-  handleMouseLeave(e){
+  handleMouseLeave = (e) => {
     this.setState({
       showDescription: false
     })
-
   }
 
-  handleClick(e){
-    // show the cards in the deck
-    // how to route.
+  handleClick = (e) => {
     this.setState(prevState => {
       return {
         clicked: !prevState.clicked
       }
-    }, console.log(this.state.clicked))
+    })
   }
 
   render(){
@@ -51,8 +36,7 @@ class Deck extends Component {
           {this.state.showDescription &&
             <div>
               {this.props.description}
-              <Link to={`${this.props.match.url}/${this.props.id}`}> this is a link</Link>
-              {/* <Route path={`${this.props.match.url}/:deckId`} render={(props) => <CardsContainer {...props} />} /> */}
+              <Link to={`${this.props.match.url}/${this.props.id}`}> View Deck </Link>
               />
             </div>
           }
@@ -67,9 +51,9 @@ Deck.defaultProps = {
   description: 'sample description',
   id: 0
 }
+
 Deck.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string,
   description: PropTypes.string
 }
-export default Deck

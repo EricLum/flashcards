@@ -1,11 +1,9 @@
-import React, {Component} from 'react'
-import CardAdapter from '../adapters/CardAdapter'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-class CardForm extends Component {
+const CardForm = (props) => {
 
-  render(){
-    return(<form onSubmit={this.props.submitFunction} onChange={this.props.handleChange}>
-
+    return(<form onSubmit={props.submitFunction} onChange={props.handleChange}>
         <div>
           <label>Title: </label>
           <input type='text' name='title' />
@@ -24,6 +22,10 @@ class CardForm extends Component {
         <input type='submit' />
     </form>)
   }
-}
+
+  CardForm.propTypes = {
+    onSubmit: PropTypes.func,
+    onChange: PropTypes.func,
+  }
 
 export default CardForm

@@ -1,24 +1,19 @@
 import React, {Component} from 'react'
 import DeckAdapter from '../adapters/DeckAdapter'
 
-class DeckForm extends Component {
-  constructor(props){
-    super(props)
-    this.handleInput = this.handleInput.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
+export default class DeckForm extends Component {
 
   state =  {
     title: '',
     description: ''
   }
 
-  handleSubmit(e){
+  handleSubmit = (e) => {
     e.preventDefault()
     DeckAdapter.post(this.state)
   }
 
-  handleInput(e){
+  handleInput = (e) =>{
     this.setState({
       [e.target.name]: e.target.value
     })
@@ -28,18 +23,13 @@ class DeckForm extends Component {
     return(
       <div> Create a Deck
         <form onSubmit={this.handleSubmit} onChange={this.handleInput}>
-          {/* <label>Question: </label> */}
-
           <label>Title: </label>
           <input type='text' name='title'/>
           <label>Description: </label>
           <input type='text' name='description'/>
-
           <input type='submit' />
         </form>
       </div>
     )
   }
 }
-
-export default DeckForm

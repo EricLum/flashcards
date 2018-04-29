@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import DeckForm from './containers/DeckForm'
-import CardForm from './containers/CardForm'
-import CardsContainer from './containers/CardsContainer'
 import CardsPageContainer from './containers/CardsPageContainer'
 import DecksContainer from './containers/DecksContainer'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-
-//views
-
-//home
-
-//create a deck
-
-//deck manager
-//ability to associate cards to multiple decks
 
 const DeckManager = ({match}) => (
   <div>

@@ -1,23 +1,19 @@
 import React, {Component} from 'react'
-class Card extends Component {
+import PropTypes from 'prop-types'
 
-  constructor(props) {
-    super(props);
-    this.toggleShowAnswer = this.toggleShowAnswer.bind(this)
-  }
+class Card extends Component {
 
   state = {
     showAnswer: false
   }
 
-  toggleShowAnswer(){
+  toggleShowAnswer = () => {
     this.setState(prevState => ({
       showAnswer: !prevState.showAnswer
     }))
   }
 
   render(){
-
     return(
       <div className='card'>
         <div>
@@ -35,6 +31,12 @@ class Card extends Component {
       </div>
     )
   }
+}
+
+Card.propTypes = {
+  title: PropTypes.string,
+  question: PropTypes.string,
+  answer: PropTypes.string
 }
 
 Card.defaultProps = {

@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import DeckAdapter from '../adapters/DeckAdapter'
 import Deck from '../containers/Deck'
 import DeckForm from '../containers/DeckForm'
-class DecksContainer extends Component {
+
+export default class DecksContainer extends Component {
 
   state = {
     decks: []
@@ -30,5 +31,3 @@ class DecksContainer extends Component {
     )
   }
 }
-
-export default DecksContainer
