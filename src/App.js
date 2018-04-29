@@ -3,6 +3,7 @@ import './App.css';
 import DeckForm from './containers/DeckForm'
 import CardForm from './containers/CardForm'
 import CardsContainer from './containers/CardsContainer'
+import CardsPageContainer from './containers/CardsPageContainer'
 import DecksContainer from './containers/DecksContainer'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
@@ -48,7 +49,7 @@ class App extends Component {
             <Navigation />
             <Route exact path ='/' component={Home} />
             <Route exact path='/decks' component={DeckManager} />
-            <Route exact path='/decks/:deckId' component={CardsContainer} />
+            <Route exact path='/decks/:deckId' component={CardsPageContainer} />
           </div>
         </Router>
       </div>
