@@ -8,7 +8,7 @@ ShallowWrapper {
     answer="Scope is the realm in which a variable lives"
     question="Explain the concept of scope"
     title="Javascript Question 1"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -24,15 +24,15 @@ ShallowWrapper {
       "children": Array [
         <div>
           Javascript Question 1
-</div>,
+        </div>,
         <div>
           Explain the concept of scope
-</div>,
+        </div>,
         <button
           onClick={[Function]}
->
+        >
           click me
-</button>,
+        </button>,
         false,
       ],
       "className": "card",
@@ -86,15 +86,15 @@ ShallowWrapper {
         "children": Array [
           <div>
             Javascript Question 1
-</div>,
+          </div>,
           <div>
             Explain the concept of scope
-</div>,
+          </div>,
           <button
             onClick={[Function]}
->
+          >
             click me
-</button>,
+          </button>,
           false,
         ],
         "className": "card",
