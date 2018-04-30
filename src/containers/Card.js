@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 class Card extends Component {
-  
+
   state = {
     showAnswer: false
   }
@@ -15,14 +15,14 @@ class Card extends Component {
 
   render(){
     return(
-      <div className='card'>
+      <div className='card cardGridItem'>
         <div>
           {this.props.title}
         </div>
         <div>
           {this.props.question}
         </div>
-        <button onClick={this.toggleShowAnswer}>click me</button>
+        <button onClick={this.toggleShowAnswer}>Reveal Answer</button>
         {this.state.showAnswer &&
           <div>
             {this.props.answer}

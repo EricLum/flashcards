@@ -6,7 +6,9 @@ export default class Deck extends Component {
 
   state = {
     clicked: false,
-    showDescription: false
+    showDescription: false,
+    title:'',
+    description: ''
   }
 
   handleMouseEnter = (e) => {
@@ -31,16 +33,17 @@ export default class Deck extends Component {
 
   render(){
     return(
+      <div className='cardGridItem'>
         <div onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} onClick={this.handleClick} className='card'>
           {this.props.title}
           {this.state.showDescription &&
             <div>
               {this.props.description}
               <Link to={`${this.props.match.url}/${this.props.id}`}> View Deck </Link>
-              />
             </div>
           }
         </div>
+      </div>
     )
   }
 }

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 const CardForm = (props) => {
 
-    return(<form onSubmit={props.submitFunction} onChange={props.handleChange}>
+    return(<div className='genericForm'>
+      <form onSubmit={props.submitFunction} onChange={props.handleChange}>
         <div>
           <label>Title: </label>
           <input type='text' name='title' />
@@ -20,7 +21,8 @@ const CardForm = (props) => {
         </div>
 
         <input type='submit' />
-    </form>)
+    </form>
+      </div>)
   }
 
   CardForm.propTypes = {

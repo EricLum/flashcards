@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import DeckAdapter from '../adapters/DeckAdapter'
 import Card from './Card'
-import CardsContainer from './CardsContainer'
+import CardsContainer from '../components/CardsContainer'
 import CardAdapter from '../adapters/CardAdapter'
-import CardForm from './CardForm'
+import CardForm from '../components/CardForm'
 
 export default class CardsPageContainer extends Component {
 

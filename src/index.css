@@ -7,11 +7,48 @@ body {
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(5,20%);
-  grid-template-rows: repeat(5, 20%)
+  grid-template-rows: repeat(5, 20%);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.cardGridItem {
+  height: 100px;
+  width: 200px;
 }
 
 .landingLinks {
+  margin-bottom: 25px;
   display:grid;
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(5,20%);
+  font-size: 12pt;
+}
+
+.banner div {
+  letter-spacing: 85px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 50pt;
+  text-transform: uppercase;
+  font-style: oblique;
+}
+
+.mainBody {
+  margin-top: 25px;
+  margin: 0 auto;
+}
+
+.genericForm {
+  border: 2px 2px 2px 2px solid;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 300px;
+  clear: both;
+}
+.genericForm input {
+  width: 100%;
+  clear: both;
 }

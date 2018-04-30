@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme,{ shallow, mount } from 'enzyme';
 import renderer from 'react-test-renderer'
 import Adapter from 'enzyme-adapter-react-16'
-import CardForm from '../containers/CardForm'
+import CardForm from '../components/CardForm'
 
 Enzyme.configure({adapter: new Adapter()})
 
