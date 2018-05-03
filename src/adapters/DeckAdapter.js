@@ -1,5 +1,8 @@
 const DeckAdapter = (function(){
   let urlPaths = {'base': 'http://localhost:3001/api/v1/decks'}
+  if (process.env.NODE_ENV === 'production') {
+    urlPaths['base'] = 'https://flashiercards-backend.herokuapp.com/api/v1/decks'
+  }
   return class DeckAdapter {
 
     static index() {
